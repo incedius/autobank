@@ -5,15 +5,21 @@ module.exports = function AutoBank(mod) {
     bankItems=[],
     invItems=[],
     _gameId,
-    currentContract,
     enableGuildBank=false
   
   mod.command.add(['autobank','ab'], {
     $none() {
       enabled=!enabled
-      enabled?msg("enabled"):msg("disabled")
       
-      if(!enabled){
+      if(enabled){
+        msg("enabled")
+        mod.toServer('C_SHOW_INVEN',1, {
+          unk: 1
+        })
+        
+        
+      } else{
+        msg("disabled")
         reset()
       }
     },
@@ -22,17 +28,18 @@ module.exports = function AutoBank(mod) {
       enableGuildBank?msg("Autobanking to Guild Bank ON. Make sure you have the right permissions"):msg("Autobanking for Guild Bank OFF")
     }
   })
-  
+  /*
   mod.hook('S_REQUEST_CONTRACT', 1, event =>{
     currentContract=event.id
   })
-  
+  */
   mod.hook('S_CANCEL_CONTRACT', 1, event =>{
-    if(currentContract==event.id && enabled){
+    if(!enabled) return
+    //if(currentContract==event.id && enabled){
       msg("disabled")
       enabled=false
       reset()
-    }
+    //}
   })
   
   mod.hook('S_INVEN', 17, event => {
@@ -49,7 +56,8 @@ module.exports = function AutoBank(mod) {
     currentTab = event.offset
     bankItems = event.items
     
-    bankit()
+    if(bankItems.length>0 && invItems.length>0)
+      bankit()
   })
   
   function bankit(){
@@ -88,8 +96,8 @@ module.exports = function AutoBank(mod) {
     bankType=0
     bankItems=[]
     invItems=[]
-    currentContract=0
-    enableGuildBank=false
+    //currentContract=0
+    //enableGuildBank=false
   }
   
   function msg(event) { mod.command.message(event); }

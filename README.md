@@ -12,9 +12,6 @@ Only opcode for current NA patch(344300) provided. Use https://github.com/Owyn/a
 
 # Usage
 
- 1. Use command `autobank` or `ab` to toggle ON/OFF.
- 2. Open banker UI.
- 3. Click on sort in inventory.
- 4. Click on bank tab.
+Use command `autobank` or `ab` to toggle ON/OFF.
 
 `ab guild` to toggle autobank for guild bank ON/OFF. Default OFF
