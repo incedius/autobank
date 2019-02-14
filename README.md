@@ -2,7 +2,12 @@
 
 tera-proxy module to automagically bank stuff from inv if it already exists in the bank
 
+# Setup
+
+Copy the file(s) in protocol folder to the `proxy_location\node_modules\tera-data\protocol`
+
 # Usage
+
 Use command `autobank` or `ab` to toggle ON/OFF.
 Open banker UI.
 Click on sort in inventory.

@@ -1,8 +1,8 @@
 {
     "files": {
         "LICENSE": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809",
-        "README.md": "bfddf18d2143996705f25480d1bb70d5e7bb8d974274f568863340457d2597d4",
-        "index.js": "3ed8c20d39e2ca1f7a5bb75d871200e3871e7f8b45f5bdcf638995f3537765d8",
+        "README.md": "a5939d1924b958612a88c146f518ecb9cf5038c9ce407969704c35bd573ea49c",
+        "index.js": "00be43284493f94fd5ec4d9e7afab17e0f4d564ee010e1fd2d2fd1d4289abdcf",
         "module.json": "e17bf6f114f68b66e075c7370d7e592cab701aa8965a9d766919f8e96753eb2c",
         "protocol/C_PUT_WARE_ITEM.3.def": "586b33ccc57725ee779514bcd3ca653c71ab262cd74cee555478606fe7907739"
     },

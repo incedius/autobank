@@ -66,7 +66,7 @@ module.exports = function AutoBank(mod) {
     for(let item of bankItems){
       var toBankItems = invItems.filter((inInv) => inInv.id == item.id)
       for(let toBank of toBankItems){
-        msg(`Banking item: ${item.id}`);
+        //msg(`Banking item: ${item.id}`);
         mod.toServer('C_PUT_WARE_ITEM',3, {
           gameId: _gameId,
           type: bankType,
