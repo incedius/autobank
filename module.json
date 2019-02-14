@@ -1,12 +1,12 @@
 {
-	"disableAutoUpdate": true,
-	"name": "autobank",
-	"author": "Incedius",
-	"description": "Autobanks stuff you already have in bank from your inventory",
-	"options": {
-		"niceName": "Autobank",
-		"guiName": "Autobank"
-	},
-	"servers": ["https://raw.githubusercontent.com/incedius/autobank/master/"],
-	"supportUrl": "https://github.com/incedius/autobank/issues"
+    "disableAutoUpdate": true,
+    "name": "autobank",
+    "author": "Incedius",
+    "description": "Autobanks stuff you already have in bank from your inventory",
+    "options": {
+        "niceName": "Autobank",
+        "guiName": "Autobank"
+    },
+    "servers": ["https://raw.githubusercontent.com/incedius/autobank/master/"],
+    "supportUrl": "https://github.com/incedius/autobank/issues"
 }

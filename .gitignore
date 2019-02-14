@@ -1,1 +1,3 @@
 *.lnk
+/manifest-generator.bat
+/manifest-generator.js
