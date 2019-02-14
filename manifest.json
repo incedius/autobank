@@ -2,9 +2,7 @@
     "files": {
         "LICENSE": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809",
         "README.md": "bfddf18d2143996705f25480d1bb70d5e7bb8d974274f568863340457d2597d4",
-        "autobank.lnk": "5d8f4641ecd465f41e4df368f704e5b8d98a8b0861be8ebb1c5f0b4444d17225",
         "index.js": "3ed8c20d39e2ca1f7a5bb75d871200e3871e7f8b45f5bdcf638995f3537765d8",
-        "module.config.json": "fccfa1f9e19b11a6d58abbc07369f696ed9ea3873e263f6a2adf8e04d672d4d4",
         "module.json": "e17bf6f114f68b66e075c7370d7e592cab701aa8965a9d766919f8e96753eb2c",
         "protocol/C_PUT_WARE_ITEM.3.def": "586b33ccc57725ee779514bcd3ca653c71ab262cd74cee555478606fe7907739"
     },
