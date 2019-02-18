@@ -72,7 +72,7 @@ module.exports = function AutoBank(mod) {
     }
 
     if(whitelisting){
-      if(blacklist.includes(event.itemid){
+      if(blacklist.includes(event.itemid)){
         blacklist.splice(blacklist.indexOf(event.itemid), 1)
         msg('Removed from blacklist item: ' + event.itemid)
       
