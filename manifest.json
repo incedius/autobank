@@ -1,10 +1,11 @@
 {
     "files": {
         "LICENSE": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809",
-        "README.md": "82ffdad01c768cf63142f34a5111c505da73fbc01ebef32e761c2f35d8b34acd",
-        "index.js": "ed986f568a3e8bc12b9968b4efbae08f3e42aa1eedcf32fc8df025f659d1c857",
+        "README.md": "a2536aa0d5a0dc11682efe02dfecfc8f3f6c080fcd21a0f3a3a4c5b43f53a2f8",
+        "blacklist-default.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "index.js": "3c165c285cfd132933535af5ca0668d1b13d1507c23657428d1b873651ad6d9e",
         "map/protocol.344300.map": "0ed8541fe3e50344133cd6c71c9485421cedf3c8c53e4b755bfa0b3e7c4e7cf8",
-        "module.json": "e17bf6f114f68b66e075c7370d7e592cab701aa8965a9d766919f8e96753eb2c",
+        "module.json": "0fdb1ac61fb5fa3250055653fbe3c65b406cb10be4fb0f6ae3b265877f438d35",
         "protocol/C_PUT_WARE_ITEM.3.def": "586b33ccc57725ee779514bcd3ca653c71ab262cd74cee555478606fe7907739"
     },
     "defs": {

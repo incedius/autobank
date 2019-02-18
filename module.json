@@ -8,5 +8,6 @@
         "guiName": "Autobank"
     },
     "servers": ["https://raw.githubusercontent.com/incedius/autobank/master/"],
-    "supportUrl": "https://github.com/incedius/autobank/issues"
+    "supportUrl": "https://github.com/incedius/autobank/issues",
+    "version": "1.1"
 }
