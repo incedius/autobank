@@ -57,12 +57,12 @@ module.exports = function AutoBank(mod) {
     }
   })
 
-  mod.hook('C_PUT_WARE_ITEM', 3, event => {
+  mod.hook('C_PUT_WARE_ITEM', 2, event => {
     //if blacklisting and item not already in blacklist
     if (blacklisting){
-      if (!blacklist.includes(event.itemid)){
-        blacklist.push(event.itemid)
-        msg('Black listing: ' +  event.itemid)
+      if (!blacklist.includes(event.dbid)){
+        blacklist.push(event.dbid)
+        msg('Black listing: ' +  event.dbid)
       }
       else{
         msg('Already blacklisted.')
@@ -72,9 +72,9 @@ module.exports = function AutoBank(mod) {
     }
 
     if(whitelisting){
-      if(blacklist.includes(event.itemid)){
-        blacklist.splice(blacklist.indexOf(event.itemid), 1)
-        msg('Removed from blacklist item: ' + event.itemid)
+      if(blacklist.includes(event.dbid)){
+        blacklist.splice(blacklist.indexOf(event.dbid), 1)
+        msg('Removed from blacklist item: ' + event.dbid)
       
       }
       else{
@@ -128,14 +128,14 @@ module.exports = function AutoBank(mod) {
       var toBankItems = invItems.filter((inInv) => inInv.id == item.id)
       for(let toBank of toBankItems){
         if(!blacklist.includes(toBank.id)){
-          mod.toServer('C_PUT_WARE_ITEM',3, {
+          mod.toServer('C_PUT_WARE_ITEM',2, {
             gameId: _gameId,
             type: bankType,
             page: currentTab,
             money: 0,
             invenPos: toBank.slot,
-            itemid: toBank.id,
-            dbid: toBank.dbid,
+            dbid: toBank.id,
+            uid: toBank.dbid,
             amont: toBank.amount,
             bankPos: currentTab
           })
