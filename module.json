@@ -1,5 +1,5 @@
 {
-    "disableAutoUpdate": true,
+    "disableAutoUpdate": false,
     "name": "autobank",
     "author": "Incedius",
     "description": "Autobanks stuff you already have in bank from your inventory",

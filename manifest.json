@@ -5,7 +5,7 @@
         "blacklist-default.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
         "index.js": "aebf21abd7d87bd874994e3951d2aaafb0e1f2b948330e87bdceb7f8863bcfff",
         "map/protocol.344300.map": "0ed8541fe3e50344133cd6c71c9485421cedf3c8c53e4b755bfa0b3e7c4e7cf8",
-        "module.json": "0fdb1ac61fb5fa3250055653fbe3c65b406cb10be4fb0f6ae3b265877f438d35"
+        "module.json": "8fae43d8ee794c5f427efd1e32d2fd228ae9c16f1903176a8c8351dd340a8a5e"
     },
     "defs": {
         "C_PUT_WARE_ITEM": 2,
