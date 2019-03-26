@@ -7,7 +7,7 @@ tera-proxy module to automagically bank stuff from inv if it already exists in t
 Copy/Merge file(s) in map folder to `node_modules\tera-data\map\`
 
 **Note**
-Only opcode for current NA patch(344300) provided. Use https://github.com/Owyn/alex-packet-id-finder to get the opcodes for other regions, `fpi C_PUT_WARE_ITEM`
+Only opcode for current NA(344300) and SEA(344305) provided. Use https://github.com/Owyn/alex-packet-id-finder to get the opcodes for other regions, `fpi C_PUT_WARE_ITEM`
 
 # Usage
 
