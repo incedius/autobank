@@ -1,18 +1,18 @@
 {
     "files": {
         "LICENSE": "8b1ba204bb69a0ade2bfcf65ef294a920f6bb361b317dba43c7ef29d96332b9b",
-        "README.md": "653969b2f750c72d8ca48cc3aa24497d3b587e59796cefb3da4a4a8fc19fb5df",
+        "README.md": "2a05c1c5529f88017313b27abef7cd1f7d4996a20ae087aa0bc7190aee92efd6",
         "blacklist-default.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-        "index.js": "aebf21abd7d87bd874994e3951d2aaafb0e1f2b948330e87bdceb7f8863bcfff",
+        "index.js": "1f0d6f76341a6ac2be9bc6e6e0f6a811e45d9a9c832fe9b0929c3cb5fe55f1fa",
         "map/protocol.344300.map": "0ed8541fe3e50344133cd6c71c9485421cedf3c8c53e4b755bfa0b3e7c4e7cf8",
         "map/protocol.344305.map": "1c6c7a9b9d402e27808d68a11a4404ad5f4066954fc0abc993377642136aa792",
-        "module.json": "8fae43d8ee794c5f427efd1e32d2fd228ae9c16f1903176a8c8351dd340a8a5e"
+        "module.json": "ae8239442b8c78d0e000ab9e4fce42cd9fc19c93dc6e8173df5a2041a5fd255c"
     },
     "defs": {
         "C_PUT_WARE_ITEM": 2,
         "C_SHOW_INVEN": 1,
         "S_CANCEL_CONTRACT": 1,
-        "S_INVEN": 17,
+        "S_INVEN": [17,18],
         "S_VIEW_WARE_EX": 1
     }
 }

@@ -24,3 +24,4 @@ With bank window open, right click on item in inventory to remove it from blackl
 
 # Changelog
 1.1 - Added Blacklisting and Whitelisting.
+1.1.1 - Added support for majorPatch 80.

@@ -95,7 +95,7 @@ module.exports = function AutoBank(mod) {
     //}
   })
   
-  mod.hook('S_INVEN', 17, event => {
+  mod.hook('S_INVEN', (mod.majorPatchVersion >= 80)?18:17, event => {
     if(!enabled) return;
     
     invItems = event.items
