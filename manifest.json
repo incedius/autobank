@@ -1,17 +1,19 @@
 {
     "files": {
         "LICENSE": "8b1ba204bb69a0ade2bfcf65ef294a920f6bb361b317dba43c7ef29d96332b9b",
-        "README.md": "2a05c1c5529f88017313b27abef7cd1f7d4996a20ae087aa0bc7190aee92efd6",
+        "README.md": "5316fe5dee126930a661bc1d58a857ad6d0654651eff46cf75c71a47db62a5c4",
         "blacklist-default.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-        "index.js": "1f0d6f76341a6ac2be9bc6e6e0f6a811e45d9a9c832fe9b0929c3cb5fe55f1fa",
+        "index.js": "25a48e5b46fcb0d0f1ccb85d52a54354d0347485e459edc72d883aaa5ace30b5",
         "map/protocol.344300.map": "0ed8541fe3e50344133cd6c71c9485421cedf3c8c53e4b755bfa0b3e7c4e7cf8",
         "map/protocol.344305.map": "1c6c7a9b9d402e27808d68a11a4404ad5f4066954fc0abc993377642136aa792",
         "map/protocol.349932.map": "0401ad830b4c95c17c333db8257b94d0244b359af76ad2021b015e55c4c09cbf",
         "map/protocol.353339.map": "8de7e9306777bda8472d86c8a8379a801d0f24190df6d15e25fc85147e2d3248",
-        "module.json": "ae8239442b8c78d0e000ab9e4fce42cd9fc19c93dc6e8173df5a2041a5fd255c"
+        "map/protocol.354502.map": "0d877c6b40b350d7af69bbd5b0dd49c8ec20f50e36410137e946095ecdef5a15",
+        "module.json": "7867f7297348fef78185a0453d42f0991cda285e1785b123904ddd8d8249e16d",
+        "protocol/C_PUT_WARE_ITEM.3.def": "c1a08c03585abd4b5a7baad064b98b701b600d32c54857f2718ccfcacbd6a0fc"
     },
     "defs": {
-        "C_PUT_WARE_ITEM": 2,
+        "C_PUT_WARE_ITEM": [2,3],
         "C_SHOW_INVEN": 1,
         "S_CANCEL_CONTRACT": 1,
         "S_INVEN": [17,18],

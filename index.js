@@ -22,6 +22,10 @@ module.exports = function AutoBank(mod) {
     blacklist = JSON.parse(fs.readFileSync(path.join(__dirname,'blacklist-default.json'), 'utf8'))
     save(blacklist,"blacklist.json")
   }
+
+  if(mod.majorPatchVersion >= 85){
+    mod.game.initialize
+  }
   
   mod.command.add(['autobank','ab'], {
     $none() {
@@ -29,9 +33,14 @@ module.exports = function AutoBank(mod) {
       
       if(enabled){
         msg("enabled")
-        mod.toServer('C_SHOW_INVEN',1, {
-          unk: 1
-        })
+
+        if(mod.majorPatchVersion >= 85){
+          invItems = mod.game.inventory.bagItems
+        } else{
+          mod.toServer('C_SHOW_INVEN',1, {
+            unk: 1
+          })
+        }
         
         
       } else{
@@ -57,12 +66,18 @@ module.exports = function AutoBank(mod) {
     }
   })
 
-  mod.hook('C_PUT_WARE_ITEM', 2, event => {
+  mod.hook('C_PUT_WARE_ITEM', (mod.majorPatchVersion >= 85)?3:2, event => {
     //if blacklisting and item not already in blacklist
     if (blacklisting){
-      if (!blacklist.includes(event.dbid)){
+      if ( mod.majorPatchVersion <85 && !blacklist.includes(event.dbid) )
+      {
         blacklist.push(event.dbid)
         msg('Black listing: ' +  event.dbid)
+      }
+      else if( mod.majorPatchVersion >=85 && !blacklist.includes(event.id) )
+      {
+        blacklist.push(event.id)
+        msg('Black listing: ' +  event.id)
       }
       else{
         msg('Already blacklisted.')
@@ -72,9 +87,13 @@ module.exports = function AutoBank(mod) {
     }
 
     if(whitelisting){
-      if(blacklist.includes(event.dbid)){
+      if (mod.majorPatchVersion <85 && blacklist.includes(event.dbid)){
         blacklist.splice(blacklist.indexOf(event.dbid), 1)
         msg('Removed from blacklist item: ' + event.dbid)
+      
+      } else if (mod.majorPatchVersion >=85 && blacklist.includes(event.id)){
+        blacklist.splice(blacklist.indexOf(event.id), 1)
+        msg('Removed from blacklist item: ' + event.id)
       
       }
       else{
@@ -95,12 +114,14 @@ module.exports = function AutoBank(mod) {
     //}
   })
   
-  mod.hook('S_INVEN', (mod.majorPatchVersion >= 80)?18:17, event => {
-    if(!enabled) return;
-    
-    invItems = event.items
-    _gameId = event.gameId
-  })
+  if(mod.majorPatchVersion < 85){
+    mod.hook('S_INVEN', (mod.majorPatchVersion >= 80)?18:17, event => {
+      if(!enabled) return;
+      
+      invItems = event.items
+      _gameId = event.gameId
+    })
+  }
   
   mod.hook('S_VIEW_WARE_EX', 1, event => {
     if(!enabled) return;
@@ -125,20 +146,41 @@ module.exports = function AutoBank(mod) {
     }
     
     for(let item of bankItems){
-      var toBankItems = invItems.filter((inInv) => inInv.id == item.id)
+
+      if(mod.majorPatchVersion < 85){
+        var toBankItems = invItems.filter((inInv) => inInv.id == item.id)
+      } else{
+        var toBankItems = mod.game.inventory.findAllInBagOrPockets(item.id)
+      }
+
       for(let toBank of toBankItems){
         if(!blacklist.includes(toBank.id)){
-          mod.toServer('C_PUT_WARE_ITEM',2, {
-            gameId: _gameId,
-            type: bankType,
-            page: currentTab,
-            money: 0,
-            invenPos: toBank.slot,
-            dbid: toBank.id,
-            uid: toBank.dbid,
-            amont: toBank.amount,
-            bankPos: currentTab
-          })
+          if(mod.majorPatchVersion < 85){
+            mod.toServer('C_PUT_WARE_ITEM',2, {
+              gameId: _gameId,
+              type: bankType,
+              page: currentTab,
+              money: 0,
+              invenPos: toBank.slot,
+              dbid: toBank.id,
+              uid: toBank.dbid,
+              amont: toBank.amount,
+              bankPos: currentTab
+            })
+          } else{
+            mod.toServer('C_PUT_WARE_ITEM',3, {
+              gameId: mod.game.me.gameId,
+              type: bankType,
+              offset: currentTab,
+              gold: 0,
+              unk: 0,
+              invenPos: toBank.slot,
+              id: toBank.id,
+              dbid: toBank.dbid,
+              amont: toBank.amount,
+              bankPos: currentTab
+            })
+          }
         }
       }
     }

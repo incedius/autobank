@@ -5,9 +5,10 @@ tera-proxy module to automagically bank stuff from inv if it already exists in t
 # Setup
 
 Copy/Merge file(s) in map folder to `node_modules\tera-data\map\`
+Copy contents in protocol folder to `node_modules\tera-data\protocol\`
 
 **Note**
-Only opcode for current NA(344300) and SEA(344305) provided. Use https://github.com/Owyn/alex-packet-id-finder to get the opcodes for other regions, `fpi C_PUT_WARE_ITEM`
+If the opcode isn't available for your region, use https://github.com/Owyn/alex-packet-id-finder to get the opcodes for your region, `fpi C_PUT_WARE_ITEM`
 
 # Usage
 
@@ -25,3 +26,4 @@ With bank window open, right click on item in inventory to remove it from blackl
 # Changelog
 1.1 - Added Blacklisting and Whitelisting.
 1.1.1 - Added support for majorPatch 80.
+1.1.2 - Added support for majorPatch 85.
