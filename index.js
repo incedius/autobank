@@ -171,13 +171,13 @@ module.exports = function AutoBank(mod) {
             mod.toServer('C_PUT_WARE_ITEM',3, {
               gameId: mod.game.me.gameId,
               type: bankType,
-              offset: currentTab,
-              gold: 0,
-              unk: 0,
+              page: currentTab,
+              money: 0,
+              pocket: 0,
               invenPos: toBank.slot,
               id: toBank.id,
               dbid: toBank.dbid,
-              amont: toBank.amount,
+              amount: toBank.amount,
               bankPos: currentTab
             })
           }

@@ -27,3 +27,4 @@ With bank window open, right click on item in inventory to remove it from blackl
 1.1 - Added Blacklisting and Whitelisting.
 1.1.1 - Added support for majorPatch 80.
 1.1.2 - Added support for majorPatch 85.
+1.1.3 - Aligned C_PUT_WARE_ITEM.3.def with https://github.com/SoliaRdi/auto-fishing/
